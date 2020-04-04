@@ -5,10 +5,13 @@ const int REGISTER_SIZE = 16;
 const int SCREEN_HEIGHT = 32; // 64x32 pixels.
 const int SCREEN_WIDTH = 64; // 64x32 pixels.
 
+using namespace std;
+
 class Cpu {
   public:
     Cpu();
     void ProcessCycle();
+    void ReadROM(string romPath);
 
   private:
     int programCounter;
