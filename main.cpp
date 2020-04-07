@@ -8,8 +8,9 @@ int main(int argc, char* argv[]) {
 
   string filePath = argv[1];
 
+  chip8.ReadROM(filePath);
+
   while(true) {
-    chip8.ReadROM(filePath);
     chip8.ProcessCycle();
   }
 }

@@ -4,6 +4,7 @@ const int MEM_SIZE = 4096;
 const int REGISTER_SIZE = 16;
 const int SCREEN_HEIGHT = 32; // 64x32 pixels.
 const int SCREEN_WIDTH = 64; // 64x32 pixels.
+const int MEMORY_START_ADDRESS = 512;
 
 using namespace std;
 
@@ -11,10 +12,10 @@ class Cpu {
   public:
     Cpu();
     void ProcessCycle();
-    void ReadROM(string romPath);
+    void ReadROM(string filePath);
 
   private:
     int programCounter;
-    short memory[MEM_SIZE];
-    short registers[REGISTER_SIZE];
+    int memory[MEM_SIZE]; // Each memory slot is 8 bits / a byte long.
+    int registers[REGISTER_SIZE];
 };
