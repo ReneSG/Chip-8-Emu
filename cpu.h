@@ -23,4 +23,9 @@ class Cpu {
     int memory[MEM_SIZE]; // Each memory slot is 8 bits / a byte long.
     int registers[REGISTER_SIZE];
     int graphics[SCREEN_WIDTH][SCREEN_HEIGHT];
+
+    void IncreaseProgramCounter();
+
+    // DEBUG FUNCTIONS
+    void PrintMemory();
 };

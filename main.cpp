@@ -10,7 +10,9 @@ int main(int argc, char* argv[]) {
 
   chip8.ReadROM(filePath);
 
-  while(true) {
-    chip8.ProcessCycle();
+  bool shouldKeepRunning = true;
+
+  while(shouldKeepRunning) {
+    shouldKeepRunning = chip8.ProcessCycle();
   }
 }
