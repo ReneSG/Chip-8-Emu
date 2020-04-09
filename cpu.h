@@ -11,11 +11,16 @@ using namespace std;
 class Cpu {
   public:
     Cpu();
-    void ProcessCycle();
+    bool ProcessCycle();
     void ReadROM(string filePath);
 
   private:
     int programCounter;
+    int indexRegister;
+    int delayTimer;
+    int soundTimer;
+
     int memory[MEM_SIZE]; // Each memory slot is 8 bits / a byte long.
     int registers[REGISTER_SIZE];
+    int graphics[SCREEN_WIDTH][SCREEN_HEIGHT];
 };

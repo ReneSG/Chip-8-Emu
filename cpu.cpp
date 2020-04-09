@@ -7,10 +7,11 @@ using namespace std;
 
 Cpu::Cpu() {}
 
-void Cpu::ProcessCycle() {
+bool Cpu::ProcessCycle() {
   // Read OpCode.
   // Process OpCode.
   // Increase Process Counter.
+  return false;
 }
 
 void Cpu::ReadROM(string filePath) {
